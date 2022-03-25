@@ -3,10 +3,10 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import React from 'react';
 
 const Books = (props) => {
-    console.log(props);
+    // console.log(props);
     const {id, name, img, price} = props.books;
 
-    console.log(name);
+    // console.log(name);
     return (
         <div className='col '>
             <div className="card h-100 p-2">
@@ -15,7 +15,8 @@ const Books = (props) => {
                     <h5 className="card-title">Books Name: {name}</h5>
                     <p className="card-text">Price: ${price}</p>
                 </div>
-                <button className='btn btn-outline-primary'>
+                {/* <button onClick={() => props.selectedBook(name)} className='btn btn-outline-primary'> */}
+                <button onClick={() => props.selectedBook(props.books,name)} className='btn btn-outline-primary'>
                         <span className='pe-2'>ADD TO CART</span>
                         <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
                     </button>
