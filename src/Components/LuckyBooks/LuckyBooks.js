@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Books from '../Books/Books';
+import Cart from '../Cart/Cart';
 
 const LuckyBooks = () => {
     const [books, setBooks] = useState([])
@@ -14,23 +15,29 @@ const LuckyBooks = () => {
 
     // const img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN9nd8ULhNW-25u4LTmNkgjXJKK1EKeO4nVA&usqp=CAU"
     return (
-        <div className='row'>
-            <div className='col-9'>
-                <h1 className='text-primary text-center m-5 fst-italic'>Lucky Books Library</h1>
+        
+            <div className='container'>
+                <div className='row container'>
+                    <h1 className='text-primary text-center mt-3 fst-italic'>Lucky Books Library</h1>
+                    <h3 className='text-center mb-4 fst-italic'>Choose 4 Books</h3>
+                    <div className='col-9'>
 
-                <div className='row row-cols-1 row-cols-md-3 g-4 '>
-                {
-                    books.map(book =><Books 
-                        key={book.id}
-                        books={book}
-                    ></Books>)
-                }
+                        <div className='row row-cols-1 row-cols-md-3 g-4 '>
+                        {
+                            books.map(book =><Books 
+                                key={book.id}
+                                books={book}
+                            ></Books>)
+                        }
+                        </div>
+                    </div>
+                    <div className='col-3 bg-light pt-5 px-3 rounded'>
+                        {
+                            <Cart></Cart>
+                        }
+                    </div>
                 </div>
             </div>
-            <div className='col-3'>
-                <h1>Selected Books</h1>
-            </div>
-        </div>
     );
 };
 

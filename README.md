@@ -1,8 +1,8 @@
-# Getting Started with Create React App
+# Lucky Books Library
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Live Link
 
-## Available Scripts
+Click here to view the website [Create React App](https://github.com/facebook/create-react-app).
 
 In the project directory, you can run:
 
