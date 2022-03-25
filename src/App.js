@@ -5,9 +5,8 @@ import LuckyBooks from './Components/LuckyBooks/LuckyBooks';
 function App() {
 
   return (
-    <div className="App">
+    <div >
       <LuckyBooks></LuckyBooks>
-      <Books></Books>
     </div>
   );
 }
