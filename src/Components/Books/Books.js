@@ -15,8 +15,7 @@ const Books = (props) => {
                     <h5 className="card-title">Books Name: {name}</h5>
                     <p className="card-text">Price: ${price}</p>
                 </div>
-                {/* <button onClick={() => props.selectedBook(name)} className='btn btn-outline-primary'> */}
-                <button onClick={() => props.selectedBook(props.books,name)} className='btn btn-outline-primary'>
+                <button onClick={() => props.selectedBook(name, props.books)} className='btn btn-outline-primary'>
                         <span className='pe-2'>ADD TO CART</span>
                         <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
                     </button>
