@@ -16,9 +16,9 @@ const LuckyBooks = () => {
     },[])
 
 
+    useEffect(()=>{
 
-
-    
+    },[])
 
 
     // const selectBook = (name)=>{
@@ -37,9 +37,6 @@ const LuckyBooks = () => {
     //     // setId(id);
     // }
 
-
-
-
     const selectBook = (book,name)=>{
 
         console.log(book);
@@ -53,14 +50,21 @@ const LuckyBooks = () => {
             const rest = cart.filter(book => book !== name);
             selectBook = [...rest, exists];
         }
-        setCart(selectBook, book);
-        // setId(id);
+        setCart(selectBook);
     }
 
 
+    const chooesOne = () =>{
+        const randomNumber = Math.floor(Math.random() * 4) + 1;
+        console.log(randomNumber);
+    }
+
+    const deleteData = () =>{
+        setCart([]);
+    }
 
 
-    console.log(cart);
+    // console.log(cart.id);
 
     // const img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN9nd8ULhNW-25u4LTmNkgjXJKK1EKeO4nVA&usqp=CAU"
     return (
@@ -74,6 +78,7 @@ const LuckyBooks = () => {
                         <div className='row row-cols-1 row-cols-md-3 g-4 '>
                         {
                             books.map(book =><Books 
+                                deleteData={deleteData}
                                 key={book.id}
                                 books={book}
                                 selectedBook={selectBook}
@@ -81,11 +86,14 @@ const LuckyBooks = () => {
                         }
                         </div>
                     </div>
+
                     <div className='col-3 bg-light pt-5 px-3 rounded '>
                         {
+                            // cart.map(book => <Cart book={book}></Cart>)
                             <Cart
                                 key={cart.id}
                                 selectedBook={cart}
+
                             ></Cart>
                         }
                     </div>
