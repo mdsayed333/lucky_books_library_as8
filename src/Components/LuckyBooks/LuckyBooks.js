@@ -40,8 +40,10 @@ const LuckyBooks = () => {
 
     const chooesOne = () =>{
         let selectedCart = [];
-        const randomNumber = Math.floor(Math.random() * 4) + 1;
+        const randomNumber = Math.floor(Math.random() * 3) + 1;
+        console.log(randomNumber);
         const selected =  cart;
+        console.log(selected);
         selectedCart = selected[randomNumber]
         console.log(selectedCart);
         setName(selectedCart);
