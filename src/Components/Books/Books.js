@@ -3,10 +3,8 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import React from 'react';
 
 const Books = (props) => {
-    // console.log(props);
-    const {id, name, img, price} = props.books;
+    const {name, img, price} = props.books;
 
-    // console.log(name);
     return (
         <div className='col '>
             <div className="card h-100 p-2">

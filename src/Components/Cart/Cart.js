@@ -2,13 +2,15 @@ import React from 'react';
 import './Cart.css';
 
 const Cart = (props) => {
-    const books = props.selectedBook
+    const books = props.selectedBook;
 
     const SetBookName =(props)=>{    //main
+        const {name, book} = props;
+
         return(
             <div>
-                <p>{props.name}</p>
-                <p>{props.book}</p>
+                <p>{name}</p>
+                <p>{book}</p>
             </div>
         )
     }
