@@ -6,9 +6,7 @@ import './LuckyBooks.css';
 
 const LuckyBooks = () => {
     const [books, setBooks] = useState([]);
-
     const [cart, setCart] = useState([]);
-    
     const [name, setName] = useState([]);
 
     useEffect(() => {
@@ -35,9 +33,6 @@ const LuckyBooks = () => {
         }
     }
 
- 
-
-
     const chooesOne = () =>{
         let selectedCart = [];
         const randomNumber = Math.floor(Math.random() * 3) + 1;
@@ -45,7 +40,6 @@ const LuckyBooks = () => {
         selectedCart = selected[randomNumber]
         setName(selectedCart);
         setCart([]);
-
     }
 
     const deleteData = () =>{
